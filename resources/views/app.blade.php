@@ -132,7 +132,15 @@
           </div>
     </div>
 
-    <div id='map' class='map'></div>
+    <div class="map-container" onclick="this.querySelector('input[type=checkbox]').click()" >
+      <div id='map' class="map" ></div><nav id="listing-group" class="listing-group">
+        <input type="checkbox" id="scrollZoom"  />
+        
+        </nav>
+    </div>
+
+<!-- 
+    <div id='map' class='map'></div> -->
     <div class="footer">
       <div class="content">
         <p>This app is powered by</p>
@@ -186,6 +194,18 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/light-v10',
   center: [-3.01, 53.64],
   zoom: 7
+});
+
+map.scrollZoom.disable();
+document
+.getElementById('listing-group')
+.addEventListener('change', function (e) {
+var handler = e.target.id;
+if (e.target.checked) {
+map[handler].enable();
+} else {
+map[handler].disable();
+}
 });
 var marker = '<?php echo json_encode($geojson); ?>';
 var geojson = JSON.parse(marker);
