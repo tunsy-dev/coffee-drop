@@ -1,0 +1,343 @@
+// // Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$brown:#373737;
+$green:#28E7A8;
+
+// @media (max-width: $md) {}
+
+body {
+    font-family: 'Raleway', sans-seri;
+    width: 100%;
+}
+
+.hero {
+    background-image: url(../img/shutterstock_326070713@2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 59% top;
+    height: 100vh;  #map {
+    width: 100%;
+    height: 550px;
+    background-color: #595959;
+}
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    @media (min-width: $md) {
+        height: 550px;
+        background-position: left 20% top;
+    }
+
+    .hero-inner {
+        width: 259px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: 22px;
+        @media (min-width: $md) {
+            width: 360px;
+        }
+
+        @media (min-width: $lg) {
+            margin-top: 6em;
+        }
+
+        @media (min-width: $xl) {
+            margin-left: 8em;
+            margin-top: 6em;
+        }
+
+        .tagline {
+            margin-bottom: 25px;
+            h1 {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+
+                @media (min-width: $md) {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        .tagline2 {
+            display: none;
+            margin-bottom: 25px;
+            h4 {
+                color: white;
+                font-size: 18px;
+                font-weight: 200;
+            }
+            @media (min-width: $md) {
+                display: block;
+            }
+        }
+        .btn-container {
+            @media (min-width: $lg) {
+                display: flex;
+                justify-content: space-between;
+            }
+            .app-button {
+                background-image: url(../img/app-store.png);
+                width: 162px;
+                height: 48px;
+                background-color: black;
+                margin-bottom: 11px;
+                border: 1px solid white;
+                border-radius: 10px;
+                &.google-play {
+                    background-image: url(../img/google-play.png);
+                }
+                @media (min-width: $lg) {
+                    margin-bottom: 14px;
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+    .app-mock {
+        height: 60%;
+        position: absolute;
+        left: 45%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        @media (min-width: $md) {
+            height: 90%;
+            left: 70%;
+            top: 55%;
+        }
+    }
+}
+
+nav {
+    .navbar-expand-md,
+    .navbar-collapse {
+      @media (min-width: $lg) {
+        display: flex !important;
+        flex-basis: auto;
+        justify-content: flex-end;
+        .navbar-nav {
+          margin-right: 3em;
+          @media (min-width: $xl) {
+            margin-right: 7em;
+          }
+          .nav-link {
+            margin-left: 2em;
+            color: rgba(255, 255, 255, 1);
+            font-size: 18px;
+            font-weight: Medium;
+          }
+        }
+      }
+    }
+    .nav-logo {
+      background-image: url(../img/logo.svg);
+      background-size: cover;
+      height: 36px;
+      width: 179px;
+      margin-left: 10px;
+      @media (min-width: $xl) {
+        margin-left: 6em;
+      }
+    }
+  
+    .custom-toggler {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='straight' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      width: 40px;
+      height: 40px;
+      padding: 2px 2px 2px 2px;
+      line-height: 0.25px;
+      margin-right: 1em;
+    }
+  
+    .navbar-toggler {
+      margin: 0px solid black;
+      padding: 0px;
+      line-height: 0.25px;
+    }
+  }
+.how-it-works,
+.prices {
+    text-align: center;
+    padding-bottom: 80px;
+    @media (min-width: $md) {
+        padding-bottom: 120px;
+    }
+    .coloumns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $md) {
+            flex-direction: row;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: center;
+            align-items: baseline;
+        }
+        @media (min-width: $lg) {
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            justify-content: space-around;
+        }
+    }
+
+    .title {
+        margin-top: 6em;
+        margin-bottom: 2em;
+    }
+
+    .item {
+        .icon {
+            margin: 0 auto 20px auto;
+            background-image: url(../img/icon-1.svg);
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            &.second {
+                background-image: url(../img/icon-2.svg);
+            }
+            &.third {
+                background-image: url(../img/icon-3.svg);
+            }
+        }
+
+        .text {
+            width: 185px;
+            font-size: 16;
+            text-align: center;
+            @media (min-width: $xl) {
+                width: 305px;
+            }
+        }
+    }
+    .arrow-container {
+        height: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        .arrow {
+            background-image: url(../img/arrow.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 70px;
+            width: 70px;
+            margin-top: 0px;
+            transform: rotate(90deg);
+            @media (min-width: $md) {
+                transform: none;
+                margin-top: -140px;
+
+            }
+        }
+    }
+    &.prices {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #FFFFFF;
+        background-color: $brown;
+        align-content: center;
+        padding-bottom: 10em;
+        .item {
+            position: relative;
+            margin-bottom: 3em;
+            @media (min-width: $md) {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            @media (min-width: $lg) {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .title-prices {
+                margin-bottom: 20px;
+                text-align: center;
+                color: $green;
+            }
+
+            .price-table {
+                color: #FFFFFF;
+                font-size: 18px;
+                border-radius: 6px;
+                margin-bottom: 0px;
+                width: 300px;
+                overflow: hidden;
+                @media (min-width: $md) {
+                    width: 200px;
+                }
+                @media (min-width: $lg) {
+                    width: 280px;
+                }
+                @media (min-width: $xl) {
+                    width: 350px;
+                }
+                .row {
+                    height: 55px;
+                    width: inherit;
+                    margin: inherit;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    background-color: #595959;
+                    &.grey {
+                        background-color: #6E6E6E;
+                    }
+                }
+            }
+            .img-bean {
+                background-image: url(../img/coffee-beans.svg);
+                background-repeat: no-repeat;
+                height: 37px;
+                width: 37px;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+#map {
+    width: 100%;
+    height: 550px;
+    background-color: #595959;
+}
+.marker {
+    background-image: url('/img/map-pin.svg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  } 
+.footer {
+    height: 100px;
+    width: auto;
+    background-color: #373737;
+    .content {
+        font-size: 14px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .coffeeDrop {
+            background-image: url(../img/footer-logo.svg);
+            background-size: cover;
+            height: 36px;
+            width: 179px;
+            margin-top: -10px;
+        }
+    }
+}
