@@ -180,7 +180,7 @@
       
 <script>
 
-mapboxgl.accessToken = '<%-process.env.MAPBOX_TOKEN%>';
+mapboxgl.accessToken = 'pk.eyJ1IjoidHVuc3kiLCJhIjoiY2toeGloaGhpMGlzMjJzbGY3bGs4ZnVzMiJ9.0PbNQfIEWaNE35WSzlmIwA';
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v10',
